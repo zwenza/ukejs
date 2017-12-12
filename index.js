@@ -1,13 +1,19 @@
-var app = Uke();
+var app = UkeApp();
 var router = Router();
 
-const HelloComponent = app.component('hello', function() {
-    return '<h1>hello world!</h1>';
+const HelloComponent = new Uke({
+    selector: 'hello',
+    render: function () {
+        return '<h1>hello world</h1>';
+    }
 });
 
-const BlubComponent = app.component('blub', function() {
-    return '<h2>blub</h2';
-})
+const BlubComponent = new Uke({
+    selector: 'blub',
+    render: function () {
+        return '<h2>blub</h2>';
+    }
+});
 
 router.route('/', HelloComponent);
 router.route('/blub', BlubComponent);
