@@ -1,4 +1,4 @@
-var app = Lib();
+var app = Uke();
 var router = Router();
 
 const HelloComponent = app.component('hello', function() {
