@@ -4,19 +4,18 @@ var router = Router();
 const HelloComponent = new Uke({
     selector: 'hello',
     render: function () {
-        return '<h1>hello world</h1>';
-    }
-});
-
-const BlubComponent = new Uke({
-    selector: 'blub',
-    render: function () {
-        return '<h2>blub</h2>';
+        return u('div', null, [
+            u('h1', null, [
+                'Hello World!!!'
+            ]),
+            u('h3', null, [
+                'Virtual DOM works!'
+            ])
+        ])
     }
 });
 
 router.route('/', HelloComponent);
-router.route('/blub', BlubComponent);
 
 app.router(router);
 app.mount('app');
