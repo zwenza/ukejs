@@ -1,0 +1,9 @@
+{
+    "plugins": [
+        [
+            "transform-react-jsx", {
+                "pragma": "u" // will change the default React.createElement to UkeJs u() generator
+            }
+        ]
+    ]
+}
