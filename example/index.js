@@ -3,28 +3,28 @@ var router = Router();
 
 const HelloComponent = new Uke({
     selector: 'hello',
-    render: function () {
-        return <div className="uke-container">
-            <h1 style="color: blue;">Hello</h1>
-            <h2>JSX World!</h2>
-            <input type="checkbox" checked={true}/>
+    props: {
+        greetings: 'Hola!'
+    },
+    render: props => {
+        return <div>
+            <h1>Hello World!</h1>
+            { props.greetings }
+            <test></test>
         </div>
     }
 });
 
-const WorldComponent = new Uke({
-    selector: 'world',
-    render: function () {
-        return <h2>You pressed it!</h2>
+const TestComponent = new Uke({
+    selector: 'test',
+    render: props => {
+        return <h1>Test</h1>
     }
 });
+
+app.component(HelloComponent);
 
 router.route('/', HelloComponent);
 
 app.router(router);
 app.mount('app');
-
-const btn = document.getElementById('btn1');
-btn.addEventListener('click', function() {
-    updateElement(document.getElementById('app'), WorldComponent.render(), HelloComponent.render());
-});
