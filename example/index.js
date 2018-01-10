@@ -4,9 +4,10 @@ var router = Router();
 const HelloComponent = new Uke({
     selector: 'hello',
     render: function () {
-        return <div>
-            <h1>Hello</h1>
+        return <div className="uke-container">
+            <h1 style="color: blue;">Hello</h1>
             <h2>JSX World!</h2>
+            <input type="checkbox" checked={true}/>
         </div>
     }
 });
