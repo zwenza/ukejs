@@ -1,7 +1,7 @@
 export default {
-    input: './lib/index.js',
-    output: {
-      file: './dist/bundle.js',
-      format: 'cjs'
-    }
-  };
+  input: './lib/index.js',
+  output: {
+    file: './dist/bundle.js',
+    format: 'cjs'
+  }
+};

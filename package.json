@@ -1,7 +1,8 @@
 {
   "name": "ukejs",
   "version": "1.0.0",
-  "description": "Uke is a small javascript library written without any dependencies.",
+  "description":
+    "Uke is a small javascript library written without any dependencies.",
   "main": "dist/bundle.js",
   "directories": {
     "example": "example"
@@ -16,12 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/zwenza/ukejs.git"
   },
-  "keywords": [
-    "javascript",
-    "jsx",
-    "babel",
-    "javascript-framework"
-  ],
+  "keywords": ["javascript", "jsx", "babel", "javascript-framework"],
   "author": "David Jöch (david.joech@gmail.com)",
   "license": "ISC",
   "bugs": {
