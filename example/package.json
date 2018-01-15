@@ -4,16 +4,15 @@
   "description": "An example how to use UkeJS",
   "main": "index.js",
   "scripts": {
-    "start": "npm run clean && npm run build",
-    "build": "./node_modules/.bin/babel . --out-file bundle.js --ignore node_modules",
-    "clean": "./node_modules/.bin/del bundle.js"
+    "start": "webpack --config webpack.config.js"
   },
   "author": "David Joech (david.joech@gmail.com)",
   "license": "ISC",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.2",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.6.1",
-    "del-cli": "^1.1.0"
+    "del-cli": "^1.1.0",
+    "webpack": "^3.10.0"
   }
 }

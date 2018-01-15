@@ -1,7 +1,9 @@
-var app = UkeApp();
+import {Lib, Router, Uke} from 'ukejs';
+
+var app = Lib();
 var router = Router();
 
-const HelloComponent = new Uke({
+const HelloComponent = Uke.Uke({
     selector: 'hello',
     props: {
         greetings: 'Hola!'
@@ -15,7 +17,7 @@ const HelloComponent = new Uke({
     }
 });
 
-const TestComponent = new Uke({
+const TestComponent = Uke.Uke({
     selector: 'test',
     render: props => {
         return <h1>Test</h1>
@@ -23,6 +25,7 @@ const TestComponent = new Uke({
 });
 
 app.component(HelloComponent);
+app.component(TestComponent);
 
 router.route('/', HelloComponent);
 

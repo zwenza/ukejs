@@ -2,7 +2,7 @@
   "name": "ukejs",
   "version": "1.0.0",
   "description": "Uke is a small javascript library written without any dependencies.",
-  "main": "index.js",
+  "main": "dist/bundle.js",
   "directories": {
     "example": "example"
   },
