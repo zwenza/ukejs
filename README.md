@@ -1,3 +1,5 @@
+![UkeJS Logo](assets/logo.png)
+
 # Uke
 
 Uke is a small javascript library to write javascript application.
