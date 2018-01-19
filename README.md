@@ -32,10 +32,10 @@ Upcoming:
 This maybe outdated because the API currently changes everyday basically 🤷
 
 ```
-import { Lib, Router, Uke } from 'ukejs';
+import { UkeCore, UkeRouter, Uke } from 'ukejs';
 
-var app = Lib();
-var router = Router();
+var app = UkeCore();
+var router = UkeRouter();
 
 const HelloComponent = Uke.component({
   selector: 'hello',
