@@ -37,33 +37,41 @@ import { UkeCore, UkeRouter, Uke } from 'ukejs';
 var app = UkeCore();
 var router = UkeRouter();
 
-const HelloComponent = Uke.component({
-  selector: 'hello',
-  props: {
-    greetings: 'Hola!'
+const Concert = Uke.component({
+  selector: 'Concert',
+  defaultProps: {
+    song: 'Somewhere Over The Rainbow'
   },
   render: props => {
     return (
       <div>
-        <h1>Hello World!</h1>
-        {props.greetings}
-        <test />
+        <h1>Welcome!</h1>
+        <ukulele type="supran" />
       </div>
     );
   }
 });
 
-const TestComponent = Uke.component({
-  selector: 'test',
+const Ukulele = Uke.component({
+  selector: 'ukulele',
+  defaultProps: {
+    name: 'David'
+  },
   render: props => {
-    return <h1>Test</h1>;
+    return (
+      <div>
+        <p>
+          My name is {props.name} and i play {props.type} Ukulele!
+        </p>
+      </div>
+    );
   }
 });
 
-app.component(HelloComponent);
-app.component(TestComponent);
+app.component(Concert);
+app.component(Ukulele);
 
-router.route('/', HelloComponent);
+router.route('/', Concert);
 
 app.router(router);
 app.mount('app');
