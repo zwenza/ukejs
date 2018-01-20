@@ -4,7 +4,6 @@ var app = UkeCore();
 var router = UkeRouter();
 
 const Concert = Uke.component({
-  selector: 'Concert',
   defaultProps: {
     song: 'Somewhere Over The Rainbow'
   },
@@ -12,14 +11,13 @@ const Concert = Uke.component({
     return (
       <div>
         <h1>Welcome!</h1>
-        <ukulele type="supran" />
+        <Ukulele type="supran" />
       </div>
     );
   }
 });
 
 const Ukulele = Uke.component({
-  selector: 'ukulele',
   defaultProps: {
     name: 'David'
   },
@@ -33,9 +31,6 @@ const Ukulele = Uke.component({
     );
   }
 });
-
-app.component(Concert);
-app.component(Ukulele);
 
 router.route('/', Concert);
 
