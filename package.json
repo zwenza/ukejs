@@ -8,6 +8,7 @@
     "example": "example"
   },
   "scripts": {
+    "start": "rollup -c && npm start --prefix ./example",
     "build": "rollup -c"
   },
   "devDependencies": {
