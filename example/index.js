@@ -27,6 +27,13 @@ const Ukulele = Uke.component({
         <p>
           My name is {props.name} and i play {props.type} Ukulele!
         </p>
+        <button
+          onClick={() => {
+            alert('ring!');
+          }}
+        >
+          play!
+        </button>
       </div>
     );
   }

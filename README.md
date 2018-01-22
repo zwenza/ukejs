@@ -19,6 +19,7 @@ If you have questions, feel free to open issues and i will try to answer them ðŸ
 * props
 * virtual dom
 * JSX support!
+* event handling
 * very (very!) basic routing
 
 Upcoming:
@@ -61,6 +62,13 @@ const Ukulele = Uke.component({
         <p>
           My name is {props.name} and i play {props.type} Ukulele!
         </p>
+        <button
+          onClick={() => {
+            alert('ring!');
+          }}
+        >
+          play!
+        </button>
       </div>
     );
   }
