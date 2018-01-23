@@ -1,5 +1,7 @@
 ![UkeJS Logo](assets/logo.png)
 
+[![CircleCI](https://circleci.com/gh/zwenza/ukejs/tree/master.svg?style=svg)](https://circleci.com/gh/zwenza/ukejs/tree/master)
+
 Uke is a small javascript library to write javascript application.
 
 ## Purpose
