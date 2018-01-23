@@ -4,7 +4,7 @@
   "description": "An example how to use UkeJS",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --config webpack.config.js"
+    "start": "./node_modules/.bin/webpack --config webpack.config.js"
   },
   "author": "David Joech (david.joech@gmail.com)",
   "license": "ISC",
