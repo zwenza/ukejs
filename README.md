@@ -26,7 +26,7 @@ If you have questions, feel free to open issues and i will try to answer them ðŸ
 
 Upcoming:
 
-* state handling
+* state handling (basics are already available)
 * redux reimplementation
 * better routing
 
@@ -41,14 +41,17 @@ var app = UkeCore();
 var router = UkeRouter();
 
 const Concert = Uke.component({
+  state: {
+    playing: true
+  },
   defaultProps: {
     song: 'Somewhere Over The Rainbow'
   },
-  render: props => {
+  render: (props, state) => {
     return (
       <div>
         <h1>Welcome!</h1>
-        <Ukulele type="supran" />
+        <Ukulele type="supran" playing={state.playing} />
       </div>
     );
   }
@@ -62,7 +65,8 @@ const Ukulele = Uke.component({
     return (
       <div>
         <p>
-          My name is {props.name} and i play {props.type} Ukulele!
+          My name is {props.name} and i {props.playing ? 'do' : "don't"} play{' '}
+          {props.type} Ukulele!
         </p>
         <button
           onClick={() => {
