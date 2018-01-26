@@ -21,22 +21,32 @@ const Concert = Uke.component({
 });
 
 const Ukulele = Uke.component({
+  state: {
+    volume: 'silent'
+  },
   defaultProps: {
     name: 'David'
   },
-  render: props => {
+  render: (props, state) => {
     return (
       <div>
         <p>
           My name is {props.name} and i {props.playing ? 'do' : "don't"} play{' '}
-          {props.type} Ukulele!
+          {props.type} Ukulele! The ukulele is {state.volume}
         </p>
+        <p />
         <button
           onClick={() => {
-            alert('ring!');
+            Uke.setState(
+              state => {
+                state.volume = 'loud';
+              },
+              state,
+              app
+            );
           }}
         >
-          play!
+          louder!!!!
         </button>
       </div>
     );
