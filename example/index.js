@@ -8,13 +8,14 @@ const Concert = Uke.component({
     playing: true
   },
   defaultProps: {
-    song: 'Somewhere Over The Rainbow'
+    song: 'Somewhere Over The Rainbow',
+      age: 21
   },
   render: (props, state) => {
     return (
       <div>
         <h1>Welcome!</h1>
-        <Ukulele type="supran" playing={state.playing} />
+        <Ukulele type="supran" playing={state.playing} age={props.age} />
       </div>
     );
   }
@@ -32,7 +33,7 @@ const Ukulele = Uke.component({
       <div>
         <p>
           My name is {props.name} and i {props.playing ? 'do' : "don't"} play{' '}
-          {props.type} Ukulele! The ukulele is {state.volume}
+          {props.type} Ukulele! The ukulele is {state.volume}. I am {props.age} years old.
         </p>
         <p />
         <button
