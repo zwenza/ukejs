@@ -9,7 +9,7 @@ const Concert = Uke.component({
   },
   defaultProps: {
     song: 'Somewhere Over The Rainbow',
-      age: 21
+    age: 21
   },
   render: (props, state) => {
     return (
