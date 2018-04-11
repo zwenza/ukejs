@@ -7,7 +7,7 @@ Uke is a small javascript library to write javascript application.
 ## Purpose
 
 I write this library to improve my vanilla javascript knowledge and to learn
-how modern javascript frameworks like React, Vue or Angular works.
+how modern javascript frameworks like React, Vue or Angular work.
 
 This library has (and will never have) any dependencies on other libraries, because I want to build everything I need on my own.
 
